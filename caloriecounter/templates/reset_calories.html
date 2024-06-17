@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Reset Calories</h2>
+  <p>Are you sure you want to remove all food items and reset calories?</p>
+  <form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, reset</button>
+  </form>
+  <a href="{% url 'view_food' %}">Cancel</a>
+{% endblock %}

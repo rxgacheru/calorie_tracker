@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Remove Food Item</h2>
+  <p>Are you sure you want to remove this food item?</p>
+  <form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, remove</button>
+  </form>
+  <a href="{% url 'view_food' %}">Cancel</a>
+{% endblock %}

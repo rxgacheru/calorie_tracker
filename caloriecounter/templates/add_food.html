@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title class="mt-1 text-lg font-semibold text-white">Calorie Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+ <div class="hover:place-items-center  mt-24 size-96 bg-slate-300 justify-center items-center ml-96">
+  <body>
+    <h1 class="text-4xl font-extrabold dark:text-black ml-8 mt-4">Track calories!!!</h1>
+    <form method="post" class="rounded px-8 pt-6 pb-8 mb-4 ml-15 size-96 text-xl pt-6 ">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4">Add</button>
+    </form>
+  </body>
+ </div>
+</html>
